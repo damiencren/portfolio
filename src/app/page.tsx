@@ -4,19 +4,16 @@ import { ProjectCard } from "@/components/projectCard";
 import { TimelineEvent } from "@/components/timelineEvent";
 import BlurFade from "@/components/ui/blur-fade";
 import TypingAnimation from "@/components/ui/typing-animation";
-import Meteors from "@/components/ui/meteors";
 import { Button } from "@/components/ui/button";
-import { Github, Images, Instagram, Linkedin, Mail, Moon, Sun } from "lucide-react";
+import { Github, Instagram, Mail } from "lucide-react";
 import DotPattern from "@/components/ui/dot-pattern";
 import { cn } from "@/lib/utils";
 import RetroGrid from "@/components/ui/retro-grid";
 import ShineBorder from "@/components/ui/shine-border";
 import { useTheme } from "next-themes";
 import { ThemeButton } from "@/components/themeButton";
-import { small } from "framer-motion/client";
 
 const BLUR_FADE_DELAY = 0.04;
-const theme = useTheme;
 
 
 export default function Home() {

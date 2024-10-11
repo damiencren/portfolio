@@ -1,6 +1,4 @@
 import Image from "next/image"
-import { Separator } from "./ui/separator"
-import { Card } from "./ui/card"
 import { Button } from "./ui/button"
 
 interface ProjectCardProps {
