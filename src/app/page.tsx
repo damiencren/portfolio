@@ -1,101 +1,157 @@
 import Image from "next/image";
+import { DATA } from "./data/resume";
+import { ProjectCard } from "@/components/projectCard";
+import { TimelineEvent } from "@/components/timelineEvent";
+import BlurFade from "@/components/ui/blur-fade";
+import TypingAnimation from "@/components/ui/typing-animation";
+import Meteors from "@/components/ui/meteors";
+import { Button } from "@/components/ui/button";
+import { Github, Images, Instagram, Linkedin, Mail, Moon, Sun } from "lucide-react";
+import DotPattern from "@/components/ui/dot-pattern";
+import { cn } from "@/lib/utils";
+import RetroGrid from "@/components/ui/retro-grid";
+import ShineBorder from "@/components/ui/shine-border";
+import { useTheme } from "next-themes";
+import { ThemeButton } from "@/components/themeButton";
+import { small } from "framer-motion/client";
+
+const BLUR_FADE_DELAY = 0.04;
+const theme = useTheme;
+
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  return (
+    <main className="min-h-[100dvh] p-8 mt-10">
+        <DotPattern className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "fixed"
+        )}/>
+        <ThemeButton/>
+
+      <div className="flex flex-col mx-auto w-full max-w-2xl gap-6">
+        <section id="hero">
+          <BlurFade
+          delay={BLUR_FADE_DELAY}>
+            <div className="flex flex-col gap-4">
+              <div className="gap-8 flex justify-between items-center">
+                <div className="flex-col flex gap-4">
+                  <TypingAnimation className="text-base text-4xl text-left font-extrabold tracking-tight" duration={100} text={DATA.name}/>
+                  <p className="text-md">{DATA.description}</p>
+                </div>
+                <Image className="rounded-full object-cover w-32 h-32 p-1" src={DATA.avatarUrl} alt="moi" height={100} width={100}/>
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                <Button variant={"outline"} size="sm">
+                  <Github/>
+                  <span className="ml-2">@damiencren</span>
+                </Button>
+                <Button variant={"secondary"} size="sm">
+                  <Mail/>
+                  <span className="ml-2">cren.damien@gmail.com</span>
+                </Button>
+                <Button variant={"secondary"} size="sm">
+                  <Instagram/>
+                  <span className="ml-2">damien-photos</span>
+                </Button>
+              </div>
+            </div>
+          </BlurFade>
+        </section>
+        <section id="about">
+          <BlurFade delay={BLUR_FADE_DELAY*2}>
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <h2 className="text-base text-xl font-bold">A propos</h2>
+            <p className="text-justify">{DATA.aboutText}</p>
+          </div>
+          </BlurFade>
+        </section>
+        <section id="work">
+
+          <BlurFade
+            delay={BLUR_FADE_DELAY*3}>
+            <div className="flex min-h-0 flex-col gap-y-3">
+
+              <h2 className="text-base text-xl font-bold">Work</h2>
+                  
+              <ol className="relative border-m border-gray-300 dark:border-gray-700">                  
+                {DATA.work.map((work, id) =>
+                  <TimelineEvent
+                  key={id}
+                  title={work.title}
+                  description={work.description}
+                  period={work.start}
+                  imageUrl={work.logoUrl}
+                  />
+                )}
+              </ol>
+            </div>
+          </BlurFade>
+        </section>
+        
+        <section id="projects">
+          <BlurFade 
+          delay={BLUR_FADE_DELAY*4}>
+            <div className="flex min-h-0 flex-col gap-y-3 items-center">
+              <h2 className="text-base text-xl font-bold">Selection de mes projets</h2>
+              <ShineBorder className="p-0" color={"white"} borderWidth={2} borderRadius={15} duration={15}>
+              <div className="relative w-[90vw] flex flex-wrap justify-center gap-4 p-8 w-max md:w-[850px]">
+                <RetroGrid className="absolute inset-0 border rounded-xl"/>
+                    {DATA.projects.map((project, id) =>
+                        <ProjectCard
+                        key={id}
+                        title={project.title}
+                        description={project.description}
+                        image={project.image}
+                        dates={project.dates}
+                        />
+                    )}
+              </div>
+              </ShineBorder>
+            </div>
+          </BlurFade>
+        </section>
+        <section id="education">
+          <BlurFade
+          delay={BLUR_FADE_DELAY*5}>
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <h2 className="text-xl font-bold">Education</h2>
+                
+            <ol className="relative border-s border-gray-300 dark:border-gray-700">                  
+              {DATA.education.map((education, id) =>
+                <TimelineEvent
+                key={id}
+                title={education.school}
+                description={education.degree}
+                period={education.start}
+                imageUrl={education.logoUrl}
+                />
+              )}
+            </ol>
+          </div>
+          </BlurFade>
+        </section>
+        <section id="hackatons">
+          <BlurFade
+          delay={BLUR_FADE_DELAY*6}>
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <h2 className="text-xl font-bold">Hackatons</h2>
+                
+            <ol className="relative border-s border-gray-300 dark:border-gray-700">                  
+              {DATA.hackathons.map((hackathon, id) =>
+                <TimelineEvent
+                key={id}
+                title={hackathon.title}
+                description={hackathon.description}
+                period={hackathon.dates}
+                imageUrl={hackathon.image}
+                />
+              )}
+            </ol>
+          </div>
+          </BlurFade>
+        </section>
+      </div>
+    </main>
   );
 }
