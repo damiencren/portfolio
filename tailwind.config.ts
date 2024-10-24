@@ -1,3 +1,4 @@
+import { b } from "framer-motion/client";
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -10,6 +11,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			inter: ['"Inter"', 'sans-serif'],
+			arial: ['"Arial"', 'sans-serif'],
+			PS2: ['"Press Start 2P"', 'sans-serif'],
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
