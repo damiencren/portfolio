@@ -24,33 +24,33 @@ export default function Home() {
     Instagram,
     Download
   };
-  
+
   return (
     <main className="min-h-[100dvh] p-8 mt-10">
-        <DotPattern className={cn(
-          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-          "fixed"
-        )}/>
-        <ThemeButton/>
+      <DotPattern className={cn(
+        "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+        "fixed"
+      )} />
+      <ThemeButton />
 
       <div className="flex flex-col mx-auto w-full max-w-2xl gap-8">
         <section id="hero">
           <BlurFade
-          delay={BLUR_FADE_DELAY}>
+            delay={BLUR_FADE_DELAY}>
             <div className="flex flex-col gap-4">
               <div className="gap-8 flex justify-between items-center">
                 <div className="flex-col flex gap-4">
-                  <TypingAnimation className="text-base text-5xl text-left font-inter font-extrabold tracking-tight" duration={100} text={DATA.name}/>
+                  <TypingAnimation className="text-base text-5xl text-left font-inter font-extrabold tracking-tight" duration={100} text={DATA.name} />
                   <p className="text-md">{DATA.description}</p>
                 </div>
-                <Image className="shadow-lg rounded-full w-32 h-32 p-0" src={DATA.avatarUrl} alt="moi" height={100} width={100}/>
+                <Image className="shadow-lg rounded-full w-32 h-32 p-0" src={DATA.avatarUrl} alt="moi" height={100} width={100} />
               </div>
               <div className="flex gap-2 flex-wrap">
                 {DATA.socials.map((social, index) => {
                   const IconComponent = iconComponents[social.icon];
                   return (
                     <a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
-                      <Button variant={social.variant}size="default">
+                      <Button variant={social.variant} size="default">
                         {IconComponent && <IconComponent />}
                         <span className="ml-2">{social.label}</span>
                       </Button>
@@ -62,9 +62,9 @@ export default function Home() {
           </BlurFade>
         </section>
         <section id="about">
-          <BlurFade delay={BLUR_FADE_DELAY*2}>
-          <div className="flex min-h-0 flex-col gap-y-3">
-            <h2 className="text-2xl font-bold">A propos</h2>
+          <BlurFade delay={BLUR_FADE_DELAY * 2}>
+            <div className="flex min-h-0 flex-col gap-y-3">
+              <h2 className="text-2xl font-bold">A propos</h2>
               <ReactMarkdown className="text-justify"
                 components={{
                   a: ({ href, children }) => (
@@ -74,93 +74,95 @@ export default function Home() {
               >
                 {DATA.aboutText}
               </ReactMarkdown>
-          </div>
+            </div>
           </BlurFade>
         </section>
         <section id="work">
 
           <BlurFade
-            delay={BLUR_FADE_DELAY*3}>
+            delay={BLUR_FADE_DELAY * 3}>
             <div className="flex min-h-0 flex-col gap-y-3">
 
               <h2 className="text-2xl font-bold">Experience</h2>
-                  
-              <ol className="relative border-m border-gray-300 dark:border-gray-700">                  
+
+              <ol className="relative border-m border-gray-300 dark:border-gray-700">
                 {DATA.work.map((work, id) =>
                   <TimelineEvent
-                  key={id}
-                  title={work.title}
-                  description={work.description}
-                  period={work.start}
-                  imageUrl={work.logoUrl}
+                    key={id}
+                    title={work.title}
+                    description={work.description}
+                    period={work.start}
+                    imageUrl={work.logoUrl}
                   />
                 )}
               </ol>
             </div>
           </BlurFade>
         </section>
-        
+
         <section id="projects">
-          <BlurFade 
-          delay={BLUR_FADE_DELAY*4}>
+          <BlurFade
+            delay={BLUR_FADE_DELAY * 4}>
             <div className="mt-[-30px] flex min-h-0 flex-col gap-y-3 items-center">
               <h2 className="text-2xl font-bold">Selection de mes projets</h2>
-              <ShineBorder className="dark:bg-card flex flex-wrap justify-center gap-6 p-8 w-[60vw]" color={"white"} borderWidth={2} borderRadius={15} duration={15}>
-                {DATA.projects.map((project, id) =>
+              <ShineBorder className="justify-center dark:bg-card md:w-[840px] w-[440px]" color={"white"} borderWidth={2} borderRadius={15} duration={15}>
+                <div className="dark:bg-card flex flex-wrap justify-center gap-4 p-4">
+                  {DATA.projects.map((project, id) =>
                     <ProjectCard
-                    key={id}
-                    title={project.title}
-                    description={project.description}
-                    image={project.image}
-                    dates={project.dates}
-                    technos={[...project.technos]}
-                    href={project.href}
-                    repository={project.repository}
+                      key={id}
+                      title={project.title}
+                      description={project.description}
+                      image={project.image}
+                      dates={project.dates}
+                      technos={[...project.technos]}
+                      href={project.href}
+                      repository={project.repository}
                     />
-                )}
+                  )}
+                </div>
               </ShineBorder>
             </div>
           </BlurFade>
         </section>
         <section id="education">
           <BlurFade
-          delay={BLUR_FADE_DELAY*5}>
-          <div className="flex min-h-0 flex-col gap-y-3">
-            <h2 className="text-2xl font-bold">Etudes</h2>
-                
-            <ol className="relative border-s border-gray-300 dark:border-gray-700">                  
-              {DATA.education.map((education, id) =>
-                <TimelineEvent
-                key={id}
-                title={education.school}
-                description={education.degree}
-                period={education.start}
-                imageUrl={education.logoUrl}
-                />
-              )}
-            </ol>
-          </div>
+            delay={BLUR_FADE_DELAY * 5}>
+            <div className="flex min-h-0 flex-col gap-y-3">
+              <h2 className="text-2xl font-bold">Etudes</h2>
+
+              <ol className="relative border-s border-gray-300 dark:border-gray-700">
+                {DATA.education.map((education, id) =>
+                  <TimelineEvent
+                    key={id}
+                    title={education.school}
+                    description={education.degree}
+                    period={education.start}
+                    imageUrl={education.logoUrl}
+                  />
+                )}
+              </ol>
+            </div>
           </BlurFade>
         </section>
         <section id="hackatons">
           <BlurFade
-          delay={BLUR_FADE_DELAY*6}>
-          <div className="flex min-h-0 flex-col gap-y-3">
-            <h2 className="text-2xl font-bold">Hackatons</h2>
-                
-            <ol className="relative border-s border-gray-300 dark:border-gray-700">                  
-              {DATA.hackathons.map((hackathon, id) =>
-                <TimelineEvent
-                key={id}
-                title={hackathon.title}
-                description={hackathon.description}
-                period={hackathon.dates}
-                imageUrl={hackathon.image}
-                links={[...hackathon.links]}
-                />
-              )}
-            </ol>
-          </div>
+            delay={BLUR_FADE_DELAY * 6}>
+            <div className="flex min-h-0 flex-col gap-y-3">
+              <h2 className="text-2xl font-bold">Hackatons</h2>
+
+              <ol className="relative border-s border-gray-300 dark:border-gray-700">
+                {DATA.hackathons.map((hackathon, id) =>
+                  <TimelineEvent
+                    key={id}
+                    title={hackathon.title}
+                    description={hackathon.description}
+                    period={hackathon.dates}
+                    imageUrl={hackathon.image}
+                    links={[...hackathon.links]}
+                  />
+                )}
+              </ol>
+            </div>
           </BlurFade>
         </section>
       </div>

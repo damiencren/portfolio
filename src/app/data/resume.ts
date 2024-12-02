@@ -64,14 +64,25 @@ export const DATA = {
   projects: [
     {
       title: "This portfolio",
-      href: "/",
+      href: "damiencren.me",
       dates: "Sept 2024 - Oct 2024",
       active: true,
       description:
-        "Ce portfolio a été réaliser afin de me présenter et de montrer mes compétences en développement web. J'y partage mes projets, mon parcours et mes compétences.",
+        "J'ai réalisé ce portfolio afin de me présenter et de montrer mes compétences en développement web. J'y partage mes projets, mon parcours et mes compétences.",
       repository:"https://github.com/damiencren/portfolio",
       image: "/screens/proj_2.png",
       technos : ["Next.js", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      title: "Spotify Clone",
+      href: "",
+      dates: "Dec 2024 - Nov 2024",
+      active: false,
+      description:
+        "Ce site web est un clone du client spotify qui utilise l'API et l'APK de Spotify. J'ai développé cette application dans le cadre d'un projet universitaire.",
+      repository:"https://github.com/damiencren/music_player",
+      image: "/screens/proj_3.png",
+      technos : ["Vue.js", "JavaScript", "Tailwind CSS"],
     },
     {
       title: "Mace Renovation",
