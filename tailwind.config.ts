@@ -14,7 +14,6 @@ const config: Config = {
 		fontFamily: {
 			inter: ['"Inter"', 'sans-serif'],
 			arial: ['"Arial"', 'sans-serif'],
-			PS2: ['"Press Start 2P"', 'sans-serif'],
 		},
   		colors: {
   			background: 'hsl(var(--background))',
