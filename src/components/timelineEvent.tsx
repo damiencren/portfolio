@@ -26,7 +26,7 @@ export const TimelineEvent = ({ title, period, description, imageUrl, links} : T
                     
                         {links && 
                             links.map((link, index) => (
-                                <UnderlineLink className='italic' key={index} href={link.href}>{link.title}</UnderlineLink>
+                                <UnderlineLink className='after:bg-gray-400 before:bg-gray-400' key={index} href={link.href}>{link.title}</UnderlineLink>
                             ))
                         }
                     </p>

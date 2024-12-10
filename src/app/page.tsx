@@ -22,18 +22,18 @@ export default function Home() {
     Github,
     Mail,
     Instagram,
-    Download
+    Download,
   };
 
   return (
-    <main className="min-h-[100dvh] p-8 mt-10">
+    <main className="min-h-[100vh] p-8 mt-10">
       <DotPattern className={cn(
         "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
         "fixed"
       )} />
       <ThemeButton />
 
-      <div className="flex flex-col mx-auto w-full max-w-2xl gap-8">
+      <div className="flex flex-col mx-auto w-full max-w-2xl gap-8 w-full">
         <section id="hero">
           <BlurFade
             delay={BLUR_FADE_DELAY}>
@@ -43,13 +43,13 @@ export default function Home() {
                   <TypingAnimation className="text-base text-5xl text-left font-inter font-extrabold tracking-tight" duration={100} text={DATA.name} />
                   <p className="text-md">{DATA.description}</p>
                 </div>
-                <Image className="shadow-lg rounded-full w-32 h-32 p-0" src={DATA.avatarUrl} alt="moi" height={100} width={100} />
+                <Image className="shadow-lg rounded-full w-32 h-32 p-0 hidden sm:block" src={DATA.avatarUrl} alt="moi" height={100} width={100} />
               </div>
               <div className="flex gap-2 flex-wrap">
                 {DATA.socials.map((social, index) => {
                   const IconComponent = iconComponents[social.icon];
                   return (
-                    <a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
+                    <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" download={social.label === "CV"}>
                       <Button variant={social.variant} size="default">
                         {IconComponent && <IconComponent />}
                         <span className="ml-2">{social.label}</span>
@@ -104,9 +104,9 @@ export default function Home() {
           <BlurFade
             delay={BLUR_FADE_DELAY * 4}>
             <div className="mt-[-30px] flex min-h-0 flex-col gap-y-3 items-center">
-              <h2 className="text-2xl font-bold">Selection de mes projets</h2>
-              <ShineBorder className="justify-center dark:bg-card md:w-[840px] w-[440px]" color={"white"} borderWidth={2} borderRadius={15} duration={15}>
-                <div className="dark:bg-card flex flex-wrap justify-center gap-4 p-4">
+              <h2 className="text-2xl font-bold">Sélection de mes projets</h2>
+              <ShineBorder className="justify-center dark:bg-card lg:w-[840px] w-full" color={"white"} borderWidth={2} borderRadius={15} duration={15}>
+                <div className="dark:bg-card flex flex-wrap justify-center">
                   {DATA.projects.map((project, id) =>
                     <ProjectCard
                       key={id}
@@ -116,6 +116,7 @@ export default function Home() {
                       dates={project.dates}
                       technos={[...project.technos]}
                       href={project.href}
+                      url={project.url}
                       repository={project.repository}
                     />
                   )}
