@@ -20,12 +20,13 @@ export default function RootLayout({
         <meta name="author" content="Damien CREN" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Damien CREN - Portfolio" />
-        <meta property="og:description" content="Découvrez mes projets, compétences et expérience en développement web full-stack." />
+        <meta property="og:description" content="Portfolio présentant mes projets, mes compétences ainsi que mon experience en développement web full-stack." />
         <meta property="og:url" content="damiencren.me" />
         <meta property="og:image" content="/me.jpg" />
         <meta property="og:type" content="website" />
         <meta http-equiv="Content-Language" content="fr"/>
         <link rel="canonical" href="https://damiencren.me" />
+        <meta name="theme-color" content="#006106" />
       </head>
       <body>
         <ThemeProvider
