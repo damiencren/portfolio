@@ -5,8 +5,8 @@ export const DATA = {
   name: "Salut ! Je m'appelle Damien Cren 👋",
   location: "Saguenay CA",
   description:
-    "Developpeur full stack en étude à Chicoutimi, Quebec",
-  aboutText: "Je développe mes compétences en développement logiciel avec des technologies comme ***[TypeScript](https://www.typescriptlang.org/)***, ***[Next.js](https://nextjs.org/)*** et ***[Tailwind](https://tailwindcss.com/)*** pour le front-end. Côté back-end, je me spécialise en ***[Java](https://www.java.com/fr/)*** et ***[Python](https://www.python.org/)***. J’utilise également ***[Git](https://git-scm.com/)*** pour la gestion des versions et ***[SQL](https://en.wikipedia.org/wiki/SQL)*** pour les bases de données. En parallèle, je m'intéresse beaucoup à l'intelligence artificielle.",
+    "Développeur full stack en études à Chicoutimi, Quebec",
+  aboutText: "J'enrichis mes compétences en développement logiciel avec des technologies comme ***[TypeScript](https://www.typescriptlang.org/)***, ***[Next.js](https://nextjs.org/)*** et ***[Tailwind](https://tailwindcss.com/)*** pour le front-end. Côté back-end, je me spécialise en ***[Java](https://www.java.com/fr/)*** et ***[Python](https://www.python.org/)***. J’utilise également ***[Git](https://git-scm.com/)*** pour la gestion des versions et ***[SQL](https://en.wikipedia.org/wiki/SQL)*** pour les bases de données. En parallèle, je m'intéresse beaucoup à l'intelligence artificielle.",
   avatarUrl: "/me.jpg",
 
   socials: [
@@ -48,7 +48,7 @@ export const DATA = {
     {
       school: "Université du Quebec à Chicoutimi (UQAC)",
       href: "https://www.uqac.ca/",
-      degree: "Baccalaureat en Informatique (Double-Diplome)",
+      degree: "Baccalauréat en Informatique (Double-Diplome)",
       logoUrl: "/logos/uqac.png",
       start: "2024",
       end: "2024",
@@ -56,13 +56,37 @@ export const DATA = {
     {
       school: "IUT de Laval",
       href: "https://iut-laval.univ-lemans.fr/fr/index.html",
-      degree: "BUT Informatique - Parcorus Réalisation d'applications",
+      degree: "BUT Informatique - Parcours Réalisation d'applications",
       logoUrl: "/logos/iut_laval.jpg",
       start: "2022",
       end: "2024",
     },
   ],
   projects: [
+    {
+      title: "Imaginary",
+      url: "imaginary.com",
+      href: "https://imaginary-dc.vercel.app/",
+      dates: "Nov - Dec 2024",
+      active: false,
+      description:
+        "Imaginary est une application web qui me permet de stocker mes photos. Elle utilise le CDN cloudinary pour stocker les images.",
+      repository: "https://github.com/damiencren/imaginary",
+      image: "/screens/imaginary.png",
+      technos: ["Next.js", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      title: "Clone Spotify",
+      url: "",
+      href: "",
+      dates: "Nov 2024 - Dec 2024",
+      active: false,
+      description:
+        "Ce site web est un clone du client spotify qui utilise l'API et l'APK de Spotify. J'ai développé cette application dans le cadre d'un projet universitaire.",
+      repository: "https://github.com/damiencren/music_player",
+      image: "/screens/proj_3.png",
+      technos: ["Vue.js", "JavaScript", "Tailwind CSS"],
+    },
     {
       title: "Portfolio",
       url: "damiencren.me",
@@ -74,18 +98,6 @@ export const DATA = {
       repository: "https://github.com/damiencren/portfolio",
       image: "/screens/proj_2.png",
       technos: ["Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      title: "Clone Spotify",
-      url: "",
-      href: "",
-      dates: "Dec 2024 - Nov 2024",
-      active: false,
-      description:
-        "Ce site web est un clone du client spotify qui utilise l'API et l'APK de Spotify. J'ai développé cette application dans le cadre d'un projet universitaire.",
-      repository: "https://github.com/damiencren/music_player",
-      image: "/screens/proj_3.png",
-      technos: ["Vue.js", "JavaScript", "Tailwind CSS"],
     },
     {
       title: "Mace Renovation",
