@@ -6,7 +6,7 @@ export const DATA = {
   location: "Saguenay CA",
   description:
     "Développeur full stack en études à Chicoutimi, Quebec",
-  aboutText: "J'enrichis mes compétences en développement logiciel avec des technologies comme ***[TypeScript](https://www.typescriptlang.org/)***, ***[Next.js](https://nextjs.org/)*** et ***[Tailwind](https://tailwindcss.com/)*** pour le front-end. Côté back-end, je me spécialise en ***[Java](https://www.java.com/fr/)*** et ***[Python](https://www.python.org/)***. J’utilise également ***[Git](https://git-scm.com/)*** pour la gestion des versions et ***[SQL](https://en.wikipedia.org/wiki/SQL)*** pour les bases de données. En parallèle, je m'intéresse beaucoup à l'intelligence artificielle.",
+  aboutText: "Je travaille à améliorer mes compétences en développement logiciel avec des technologies comme ***[TypeScript](https://www.typescriptlang.org/)***, ***[Next.js](https://nextjs.org/)*** et ***[Tailwind](https://tailwindcss.com/)*** pour le front-end. Côté back-end, je me spécialise en ***[Java](https://www.java.com/fr/)*** et ***[Python](https://www.python.org/)***. J’utilise également ***[Git](https://git-scm.com/)*** pour la gestion des versions et ***[SQL](https://en.wikipedia.org/wiki/SQL)*** pour les bases de données. En parallèle, je m'intéresse beaucoup à l'intelligence artificielle.",
   avatarUrl: "/me.jpg",
 
   socials: [

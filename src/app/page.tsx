@@ -78,13 +78,10 @@ export default function Home() {
           </BlurFade>
         </section>
         <section id="work">
-
           <BlurFade
             delay={BLUR_FADE_DELAY * 3}>
             <div className="flex min-h-0 flex-col gap-y-3">
-
-              <h2 className="text-2xl font-bold">Experience</h2>
-
+              <h2 className="text-2xl font-bold">Expérience</h2>
               <ol className="relative border-m border-gray-300 dark:border-gray-700">
                 {DATA.work.map((work, id) =>
                   <TimelineEvent
@@ -129,7 +126,7 @@ export default function Home() {
           <BlurFade
             delay={BLUR_FADE_DELAY * 5}>
             <div className="flex min-h-0 flex-col gap-y-3">
-              <h2 className="text-2xl font-bold">Etudes</h2>
+              <h2 className="text-2xl font-bold">Études</h2>
 
               <ol className="relative border-s border-gray-300 dark:border-gray-700">
                 {DATA.education.map((education, id) =>
