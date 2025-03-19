@@ -114,6 +114,17 @@ export const DATA = {
   ],
   hackathons: [
     {
+      title: "CS Games 2025",
+      dates: "Mars 2025",
+      location: "Québec, CA",
+      description:
+        "Hackathon en équipe de 10 durant lequel j'ai pu représenter mon Université. Epreuves de Data Engineering, Deploiement Cloud et Alogrithmique.",
+      image:
+        "/logos/CS_logo.png",
+      links: [
+      ],
+    },
+    {
       title: "Nuit de l'Info",
       dates: "Dec 2024",
       location: "Laval, FR",
