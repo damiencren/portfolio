@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/themeProvider";
 import { Footer } from "@/components/footer";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 
 export default function RootLayout({
@@ -34,8 +35,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <Footer />
+          <TooltipProvider>
+            {children}
+            <Footer />
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

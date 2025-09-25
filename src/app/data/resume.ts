@@ -1,12 +1,10 @@
-import { url } from "inspector";
-import { title } from "process";
-
 export const DATA = {
-  name: "Salut ! Je m'appelle Damien Cren 👋",
-  location: "Saguenay CA",
+  name: "Hi! I'm Damien Cren 👋",
+  location: "Rennes, FR",
   description:
-    "Développeur full stack en études à Chicoutimi, Quebec",
-  aboutText: "Je travaille à améliorer mes compétences en développement logiciel avec des technologies comme ***[TypeScript](https://www.typescriptlang.org/)***, ***[Next.js](https://nextjs.org/)*** et ***[Tailwind](https://tailwindcss.com/)*** pour le front-end. Côté back-end, je me spécialise en ***[Java](https://www.java.com/fr/)*** et ***[Python](https://www.python.org/)***. J’utilise également ***[Git](https://git-scm.com/)*** pour la gestion des versions et ***[SQL](https://en.wikipedia.org/wiki/SQL)*** pour les bases de données. En parallèle, je m'intéresse beaucoup à l'intelligence artificielle.",
+    "Full stack developer studying in Rennes",
+  aboutText: "I'm a full stack developer currently pursuing a Master's degree in Software Engineering at Rennes University. I'm interested in full stack development, artificial intelligence and cloud computing. I strive to write clean, readable and optimized code.",
+  stack: ["Next.js", "TypeScript", "Tailwind", "Python", "Java", "MongoDB", "Docker", "PostgresSQL", "Prisma", "Redis", "Terraform"],
   avatarUrl: "/me.jpg",
 
   socials: [
@@ -17,38 +15,58 @@ export const DATA = {
       variant: "outline",
     },
     {
-      label: "cren.damien@gmail.com",
+      label: "Contact me !",
       url: "mailto:cren.damien@gmail.com",
       icon: "Mail",
       variant: "secondary",
     },
     {
-      label: "CV",
+      label: "Resume",
       url: "/CV.pdf",
-      icon: "Download",
+      icon: "FileText",
       variant: "secondary",
     }
   ],
 
   work: [
     {
+      company: "Banana.inc",
+      href: "https://miakito.ai/",
+      badges: [],
+      location: "Rennes",
+      title: "Website development with Next.js",
+      logoUrl: "/logos/banana.png",
+      start: "June 2025",
+      end: "Present",
+      description:
+        "I managed a Next.js application and a Python API, implementing CI/CD pipelines with GitHub Actions and infrastructure provisioning with Terraform.",
+    },
+    {
       company: "Miakito",
       href: "https://miakito.ai/",
       badges: [],
-      location: "La Bouëxière Half-Remote",
-      title: "Création d'agents IA et développement de site web avec Next.js",
+      location: "La Bouëxière",
+      title: "Building AI agents and developing a website with Next.js",
       logoUrl: "/logos/miakito.png",
       start: "May 2024",
       end: "Oct 2024",
       description:
-        "Je me suis consacré à la création d'agents IA pour divers clients et j'ai également développé un site web de monitoring pour ces agents en utilisant Next.js",
+        "I specialized in developing AI agents for diverse clients and built a monitoring platform for these agents using Next.js.",
     },
   ],
   education: [
     {
-      school: "Université du Quebec à Chicoutimi (UQAC)",
+      school: "ISTIC - Université Rennes 1",
+      href: "https://istic.univ-rennes.fr/",
+      degree: "Master's in Computer Science, Software Engineering track (IL)",
+      logoUrl: "/logos/istic.jpeg",
+      start: "2025",
+      end: "2027",
+    },
+    {
+      school: "Université du Québec à Chicoutimi (UQAC)",
       href: "https://www.uqac.ca/",
-      degree: "Baccalauréat en Informatique (Double-Diplome)",
+      degree: "Bachelor's in Computer Science (Double Degree)",
       logoUrl: "/logos/uqac.png",
       start: "2024",
       end: "2024",
@@ -56,7 +74,7 @@ export const DATA = {
     {
       school: "IUT de Laval",
       href: "https://iut-laval.univ-lemans.fr/fr/index.html",
-      degree: "BUT Informatique - Parcours Réalisation d'applications",
+      degree: "University Bachelor of Technology in Computer Science — Application Development track",
       logoUrl: "/logos/iut_laval.jpg",
       start: "2022",
       end: "2024",
@@ -70,34 +88,34 @@ export const DATA = {
       dates: "Nov - Dec 2024",
       active: false,
       description:
-        "Imaginary est une application web qui me permet de stocker mes photos. Elle utilise le CDN cloudinary pour stocker les images.",
+        "Imaginary is a web application that lets me store my photos. It uses the Cloudinary CDN to store images.",
       repository: "https://github.com/damiencren/imaginary",
       image: "/screens/imaginary.png",
-      technos: ["Next.js", "TypeScript", "Tailwind CSS"],
+      technos: ["Next.js", "TypeScript", "Tailwind"],
     },
     {
-      title: "Clone Spotify",
+      title: "Spotify Clone",
       url: "",
       href: "",
       dates: "Nov 2024 - Dec 2024",
       active: false,
       description:
-        "Ce site web est un clone du client spotify qui utilise l'API et l'APK de Spotify. J'ai développé cette application dans le cadre d'un projet universitaire.",
+        "A clone of the Spotify client that uses the Spotify API and APK. I built this as part of a university project.",
       repository: "https://github.com/damiencren/music_player",
       image: "/screens/proj_3.png",
-      technos: ["Vue.js", "JavaScript", "Tailwind CSS"],
+      technos: ["Vue.js", "JavaScript", "Tailwind"],
     },
     {
       title: "Portfolio",
       url: "damiencren.me",
       href: "https://damiencren.me",
-      dates: "Sept 2024 - Oct 2024",
+      dates: "Sep 2024 - Oct 2024",
       active: true,
       description:
-        "J'ai réalisé ce portfolio afin de me présenter et de montrer mes compétences en développement web. J'y partage mes projets, mon parcours et mes compétences.",
+        "I built this portfolio to introduce myself and showcase my web development skills. I share my projects, journey, and skills.",
       repository: "https://github.com/damiencren/portfolio",
       image: "/screens/proj_2.png",
-      technos: ["Next.js", "TypeScript", "Tailwind CSS"],
+      technos: ["Next.js", "TypeScript", "Tailwind"],
     },
     {
       title: "Mace Renovation",
@@ -106,19 +124,19 @@ export const DATA = {
       dates: "Sept 2024 - Oct 2024",
       active: true,
       description:
-        "Site vitrine réalisé pour un client spécialisé dans la rénovation. ",
+        "Showcase website built for a client specializing in renovation.",
       repository: "https://github.com/damiencren/mace_website",
       image: "/screens/proj_1.png",
-      technos: ["Next.js", "TypeScript", "Tailwind CSS"],
+      technos: ["Next.js", "TypeScript", "Tailwind"],
     }
   ],
   hackathons: [
     {
       title: "CS Games 2025",
-      dates: "Mars 2025",
-      location: "Québec, CA",
+      dates: "Mar 2025",
+      location: "Quebec, CA",
       description:
-        "Hackathon en équipe de 10 durant lequel j'ai pu représenter mon Université. Epreuves de Data Engineering, Deploiement Cloud et Alogrithmique.",
+        "Team hackathon of 10 where I represented my university. Challenges in Data Engineering, Cloud Deployment, and Algorithms.",
       image:
         "/logos/CS_logo.png",
       links: [
@@ -129,7 +147,7 @@ export const DATA = {
       dates: "Dec 2024",
       location: "Laval, FR",
       description:
-        "Développement en une nuit d'un site web visant à sensibiliser sur les écosystèmes marins, en établissant un parallèle entre le corps humain et les océans.",
+        "One-night development of a website to raise awareness about marine ecosystems, drawing a parallel between the human body and the oceans.",
       image:
         "/logos/24h_info_24.png",
       links: [
@@ -140,13 +158,13 @@ export const DATA = {
       dates: "May 2023",
       location: "Bourg-en-Bresse, FR",
       description:
-        "Hackathon national en équipe de 4 durant lequel j'ai pu représenter mon IUT. Création de site web, résolution de problèmes algorithmiques, OSINT",
+        "National hackathon in a team of 4 where I represented my IUT. Website creation, algorithmic problem solving, OSINT ",
       image:
         "/logos/24h_info.png",
       links: [
         {
           href: "https://www.leprogres.fr/education/2023/05/14/24-h-info-la-competition-qui-marquera-l-iut-informatique",
-          title: "Article sur l'événement",
+          title: "Article about the event",
         }
       ],
     },
@@ -155,13 +173,13 @@ export const DATA = {
       dates: "Dec 2022",
       location: "Laval, FR",
       description:
-        "Développement en équipe d'une application qui sensibilise sur les MST, les IST et la santé sexuelle. ",
+        "Team development of an application that raises awareness about STDs, STIs, and sexual health. ",
       image:
         "/logos/nuit_info.png",
       links: [
         {
           href: "https://www.ouest-france.fr/pays-de-la-loire/laval-53000/a-laval-une-nuit-pour-developper-une-application-d-information-sur-le-sida-et-la-sante-sexuelle-c6eeba0e-7194-11ed-8d7c-fc31769d4d38",
-          title: "Article avec notre Equipe Iclipse en Couverture",
+          title: "Article featuring our team Iclipse on the cover",
         }
       ],
     },

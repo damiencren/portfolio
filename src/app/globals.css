@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -25,8 +20,8 @@ body {
     --card-foreground: 225 57% 2%;
     --border: 225 0% 1.54%;
     --input: 225 0% 0%;
-    --primary: 225 67% 31%;
-    --primary-foreground: 225 67% 91%;
+    --primary: 225 30% 80%;
+    --primary-foreground: 225 0% 0%;
     --secondary: 225 7% 91%;
     --secondary-foreground: 225 7% 31%;
     --accent: 225 7% 91%;
@@ -48,7 +43,7 @@ body {
     --card-foreground: 225 14% 98%;
     --border: 225 10% 15%;
     --input: 225 10% 15%;
-    --primary: 225 67% 31%;
+    --primary: 225 67% 12%;
     --primary-foreground: 225 67% 91%;
     --secondary: 225 13% 13%;
     --secondary-foreground: 225 13% 73%;
@@ -64,10 +59,30 @@ body {
 @layer base {
   * {
     @apply border-border;
-    @apply font-inter;
   }
   body {
     @apply bg-background text-foreground;
     
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Blinking caret animation */
+@keyframes caret-blink {
+  0%, 40% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Slide-in on each character advance */
+@keyframes caret-slide {
+  from { transform: translateX(-0.25em); }
+  to { transform: translateX(0); }
+}
+
+@layer utilities {
+  .animate-caret {
+    animation: caret-blink 1s step-end infinite, caret-slide 120ms ease-out;
   }
 }
