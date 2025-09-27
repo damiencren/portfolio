@@ -31,7 +31,7 @@ export const DATA = {
   work: [
     {
       company: "Banana.inc",
-      href: "https://miakito.ai/",
+      href: "banana.inc/",
       badges: [],
       location: "Rennes",
       title: "Website development with Next.js",

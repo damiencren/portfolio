@@ -34,7 +34,7 @@ export const ProjectCard = ({ title, description, image, technos, repository, hr
                             {technos && technos.map((techno, index) => (
                                 <Tooltip key={index}>
                                     <TooltipTrigger>
-                                        <Image className='transition-transform duration-200 transform hover:scale-110' src={`/technos_icons/${techno}.svg`} alt={techno} width={25} height={25} />
+                                        <Image className='transition-transform duration-150 transform hover:scale-110' src={`/technos_icons/${techno}.svg`} alt={techno} width={25} height={25} />
                                     </TooltipTrigger>
                                     <TooltipContent>
                                         {techno}

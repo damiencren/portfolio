@@ -54,7 +54,7 @@ export default function Home() {
                         <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" download={social.icon}>
                           <Button variant={social.variant} size="default">
                             {IconComponent && <IconComponent />}
-                            <span className="ml-2">{social.label}</span>
+                            <span>{social.label}</span>
                           </Button>
                         </a>
                       );
