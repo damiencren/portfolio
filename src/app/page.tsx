@@ -5,7 +5,7 @@ import { TimelineEvent } from "@/components/timelineEvent";
 import BlurFade from "@/components/ui/blur-fade";
 import TypingAnimation from "@/components/ui/typing-animation";
 import { Button } from "@/components/ui/button";
-import { Download, Github, Instagram, Mail, FileText } from "lucide-react";
+import { Download, Github, Instagram, Mail, FileText, Camera } from "lucide-react";
 import DotPattern from "@/components/ui/dot-pattern";
 import { cn } from "@/lib/utils";
 import { ThemeButton } from "@/components/themeButton";
@@ -23,13 +23,14 @@ export default function Home() {
     Instagram,
     Download,
     FileText,
+    Camera
   };
 
   return (
     <main className="min-h-[100vh] p-8 mt-10 font-inter">
       <div className="fixed inset-0 -z-10 dark:bg-black bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_700px_at_48%_200px,rgba(96,165,250,0.2),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_400px_at_70%_500px,rgba(34,197,94,0.18),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_400px_at_70%_500px,rgba(34,197,94,0.09),transparent)]" />
       </div>
       <DotPattern className={cn(
         "[mask-image:radial-gradient(650px_circle_at_center,rgba(255,255,255,0.5),transparent)]",
@@ -70,7 +71,7 @@ export default function Home() {
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
             <div className="flex min-h-0 flex-col gap-y-3">
               <h2 className="text-2xl font-bold">About</h2>
-              <p>{DATA.aboutText}</p>
+              <p className="text-justify">{DATA.aboutText}</p>
 
               <div className="mt-2 flex flex-wrap gap-2">
                 {DATA.stack.map((techno, id) =>

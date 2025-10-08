@@ -25,7 +25,7 @@ export const TimelineEvent = ({ title, period, description, href, imageUrl, link
                     ) : (
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
                     )}
-                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <p className="text-base font-normal text-justify text-gray-500 dark:text-gray-400">
                         {description}
 
                         {links &&

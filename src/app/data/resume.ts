@@ -3,7 +3,7 @@ export const DATA = {
   location: "Rennes, FR",
   description:
     "Full stack developer studying in Rennes",
-  aboutText: "I'm a full stack developer currently pursuing a Master's degree in Software Engineering at Rennes University. I'm interested in full stack development, artificial intelligence and cloud computing. I strive to write clean, readable and optimized code.",
+  aboutText: "I'm a full stack developer currently pursuing a Master's degree in Software Engineering at Rennes University. I'm interested in full stack development, artificial intelligence and cloud computing. I strive to write clean, readable and optimized code. I'm also an amateur photographer.",
   stack: ["Next.js", "TypeScript", "Tailwind", "Python", "Java", "MongoDB", "Docker", "PostgresSQL", "Prisma", "Redis", "Terraform"],
   avatarUrl: "/me.jpg",
 
@@ -15,7 +15,7 @@ export const DATA = {
       variant: "outline",
     },
     {
-      label: "Contact me !",
+      label: "Contact",
       url: "mailto:cren.damien@gmail.com",
       icon: "Mail",
       variant: "secondary",
@@ -24,6 +24,12 @@ export const DATA = {
       label: "Resume",
       url: "/CV.pdf",
       icon: "FileText",
+      variant: "secondary",
+    },
+    {
+      label: "Behance",
+      url: "https://www.behance.net/damiencren",
+      icon: "Camera",
       variant: "secondary",
     }
   ],
@@ -74,7 +80,7 @@ export const DATA = {
     {
       school: "IUT de Laval",
       href: "https://iut-laval.univ-lemans.fr/fr/index.html",
-      degree: "University Bachelor of Technology in Computer Science — Application Development track",
+      degree: "University Bachelor of Technology in Computer Science - Application Development track",
       logoUrl: "/logos/iut_laval.jpg",
       start: "2022",
       end: "2024",
