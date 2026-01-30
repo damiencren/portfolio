@@ -27,9 +27,9 @@ export const DATA = {
       variant: "secondary",
     },
     {
-      label: "Behance",
-      url: "https://www.behance.net/damiencren",
-      icon: "Camera",
+      label: "Photos",
+      url: "https://www.instagram.com/dems.cr3",
+      icon: "Instagram",
       variant: "secondary",
     }
   ],
@@ -113,8 +113,8 @@ export const DATA = {
     },
     {
       title: "Portfolio",
-      url: "damiencren.me",
-      href: "https://damiencren.me",
+      url: "damiencren.fr",
+      href: "https://damiencren.fr",
       dates: "Sep 2024 - Oct 2024",
       active: true,
       description:
@@ -125,8 +125,8 @@ export const DATA = {
     },
     {
       title: "Mace Renovation",
-      url: "mace-renovation.fr",
-      href: "http://57.129.40.117/",
+      url: "",
+      href: "",
       dates: "Sept 2024 - Oct 2024",
       active: true,
       description:
